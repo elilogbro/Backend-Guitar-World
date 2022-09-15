@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "http://rubygems.org"
 
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
@@ -33,6 +33,10 @@ gem "sqlite3", "~> 1.4"
 
 # Require all files in a folder
 gem "require_all", "~> 3.0"
+
+gem "image_processing", ">= 1.2"
+
+gem 'faker'
 
 # These gems will only be used when we are running the application locally
 group :development do
