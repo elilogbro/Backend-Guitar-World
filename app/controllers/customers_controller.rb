@@ -3,7 +3,7 @@ class CustomersController < ApplicationController
     get '/customers' do
         customers = Customer.all
         customers.to_json
-      end
+    end
     
     delete '/customers/:id' do
         customer = Customer.find(params[:id])
@@ -24,5 +24,11 @@ class CustomersController < ApplicationController
         customer = Customer.create(name: params[:name], phone: params[:phone], address: params[:address], email: params[:email], password: params[:password])
         customer.to_json
     end
+
+    get '/customers/:id' do
+        customer = Customer.find_by(id: params[:id])
+        customer.to_json
+    end
+    
 
 end
