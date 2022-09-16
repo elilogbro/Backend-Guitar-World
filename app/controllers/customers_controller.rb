@@ -25,10 +25,4 @@ class CustomersController < ApplicationController
         customer.to_json
     end
 
-    get '/customers/:id' do
-        customer = Customer.find_by(id: params[:id])
-        customer.to_json
-    end
-    
-
 end
